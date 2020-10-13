@@ -2,7 +2,7 @@
   "name": "myplugin",
   "version": "0.0.2",
   "description": "Extract text from images and send it to a word document",
-  "main": "index.js",
+  "main": "background.js",
   "keywords": [],
   "author": "Robin Dijkhof",
   "license": "MIT",

@@ -1,14 +1,20 @@
 {
-  "name": "Overleaf textarea",
+  "name": "Overleaf textarea-dev",
   "version": "1.0.0",
   "description": "This plugin displays your text in a textarea so you can use spellcheck plugins like Grammarly.",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@example.com",
+      "strict_min_version": "42.0"
+    }
+  },  
   "permissions": [
     "storage",
-    "declarativeContent"
+    "tabs"
   ],
   "content_scripts": [
     {
@@ -17,6 +23,7 @@
       "run_at": "document_end"
     }
   ],
+  "content_security_policy": "default-src 'self'",
   "web_accessible_resources": ["script.js"],
   "page_action": {
     "default_popup": "popup.html",
